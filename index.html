@@ -6,9 +6,9 @@
     <h1>Vue</h1>
   </head>
 
-  <body>
+  <body style="background:#F5f5f5;">
     <div id="app">
-      v13
+      v16
       <div id="div1"></div>
       Canvas1:
       <!--rect vert : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API-->
@@ -42,40 +42,9 @@
 
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-
-    <script>
-      const app = new Vue({
-          el: "#app",
-          data: {
-              message: "Bonjour Openclassrooms clap", //String
-              answerToLife: 42, //number
-              groceries: ["pommes", "bananes", "noix de coco"], //Arrays
-              timeForFlunch: false, //Boolean
-              info: {
-		  //object
-		  topic: "VueJS",
-		  length: 5,
-              },
-
-              //TODO compute here
-              //costOfApples:2.5/20,
-              costOfApples: 2.5 / 20,
-
-              costOfBananas: 2,
-              costOfCoconuts: 1.5,
-          },
-      });
-    </script>
-    <!--  https://www.w3schools.com/html/html5_canvas.asp-->
-    <script>
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      ctx.moveTo(0, 0);
-      ctx.lineTo(200, 100);
-      ctx.stroke();
-    </script>
-  </body>
+    <div id="ecrit1" style:"position:absolute; top:100px;left:200px; z-index:1">Je suis ecrit 1
+    </div>
+    <div id="ecrit2"  style:"position:absolute; top:105px;left:200px; z-index:2">Je suis ecrit 2
+    </div> 
+    <script type="text/javascript" src="index.js"></script></body>
 </html>
