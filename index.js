@@ -19,9 +19,9 @@ function domloaded(){
 
 
 
-    var strsplit= str.split(/\r\n|\r|\n/);
-    console.log( str.split(/\r\n|\r|\n/).length);
-    console.log( str);
+    var strsplit= strtrim.split(/\r\n|\r|\n/);
+    console.log( strtrim.split(/\r\n|\r|\n/).length);
+    console.log(strtrim);
 
     /* for(var i=0;i>;){
        }*/
@@ -32,13 +32,13 @@ function domloaded(){
     //var txtdiv =elt.innerHTML;
     //console.log(txtdiv);
 
-    var splity= str.split(/\r\n|\r|\n/);
+    var splity= strtrim.split(/\r\n|\r|\n/);
     console.log("splity=");console.log(splity);  console.log("_____");
-    console.log( str.split(/\r\n|\r|\n/));
-    console.log( str.split(/\r\n|\r|\n/).length);
-    var l= str.split(/\r\n|\r|\n/).length;
-    for(let lign=0;lign<l;l++){
-	console.log(strsplit[lign]);
+    console.log( strtrim.split(/\r\n|\r|\n/));
+    console.log( strtrim.split(/\r\n|\r|\n/).length);
+    var l= strtrim.split(/\r\n|\r|\n/).length;
+    for(let lign=0;lign<l;lign++){
+	console.log("lign="+lign+" "+strsplit[lign]);
     }
 
 }
