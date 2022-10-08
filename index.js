@@ -10,12 +10,21 @@ function domloaded(){
 
     const str="#          xfruits                          xbaguette\n#      xboisson      xjambon                    xvaisselle\n#                xchips        xconserve\n#          xz                           xa\n";
 
+    const strBackticks=`
+#          xfruits                          xbaguette
+#      xboisson      xjambon                    xvaisselle
+#                xchips        xconserve
+#          xz                           xa`;
+
 
 
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
     const regex = /#/g;
     var strtrim=str.replace(regex, '');
+        var strtrimBackticks=strBackticks.replace(regex, '');
+
     console.log(str.replace(regex, ''));
+    console.log(''+strBackticks.replace(regex, ''));
 
 
 
