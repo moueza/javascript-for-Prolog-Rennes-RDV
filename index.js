@@ -67,7 +67,7 @@ function domloaded() {
         do {
             console.log("lbl100 DO");
             word = currentTextOfLine.match(pattern);
-            console.log("lbl102 Back regex word = ___" + word + "____");
+            //word="xz";
             console.log("lbl102 Back regex word = ___" + word + "____");
 
             if (word != null) {
@@ -76,7 +76,9 @@ function domloaded() {
                 pointer = indx + word.length;
                 console.log("lbl112 Back index = " + indx);
                 console.log("lbl122 Back pointer = " + pointer);
-            } else {}
+            } else {
+                console.log("lbl123 word NULL");
+            }
         } while ((indx < 500) && (indx >= 0) && (word != ""));
 
     }
