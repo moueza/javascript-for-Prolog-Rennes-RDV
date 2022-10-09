@@ -67,7 +67,7 @@ function domloaded() {
         do {
             console.log("lbl100 DO");
             word = currentTextOfLine.match(pattern);
-            //word +="abc";
+            console.log("lbl102 Back regex word = ___" + word + "____");
             console.log("lbl102 Back regex word = ___" + word + "____");
 
             if (word != null) {
