@@ -60,10 +60,15 @@ function domloaded() {
     for (let lign = 0; lign < lBack; lign++) {
         console.log("Back lign=" + lign + " " + strsplit[lign]);
         var currentTextOfLine = strsplit[lign];
-        let pattern = /[\w]+/i;
+        //const pattern = /\w+/i;
+        const pattern = /[a-zA-Z0-9]+/i;
+
+        https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match#syntax
+        //w+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
         word = null;
         let pointer = 0;
         console.log("lbl090 Back pointer NEW = " + pointer);
+	var cpt=0;
         do {
             console.log("lbl100 DO");
             word = currentTextOfLine.match(pattern);
@@ -71,15 +76,21 @@ function domloaded() {
             console.log("lbl102 Back regex word = ___" + word + "____");
 
             if (word != null) {
+                console.log("lbl104 Back regex word = ___" + word + "____");
                 console.log("lbl106 Back length =" + word.length);
+                console.log("vs");
+                console.log("lbl107 Back chars =" + getCharacterLength(word));
+
                 indx = currentTextOfLine.indexOf(word, pointer);
+                indx = 0;
                 pointer = indx + word.length;
                 console.log("lbl112 Back index = " + indx);
                 console.log("lbl122 Back pointer = " + pointer);
             } else {
                 console.log("lbl123 word NULL");
             }
-        } while ((indx < 500) && (indx >= 0) && (word != ""));
+	    cpt++;
+	} while ((cpt < 10) && (indx >= 0) && (word != ""));
 
     }
 
@@ -93,4 +104,11 @@ function domloaded() {
 
 function next() {
     console.log("next");
+}
+
+/**https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length*/
+function getCharacterLength(str) {
+    // The string iterator that is used here iterates over characters,
+    //  not mere code units
+    return [...str].length;
 }
