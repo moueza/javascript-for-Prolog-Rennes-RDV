@@ -15,7 +15,7 @@ function domloaded() {
 #          xz                           xa`;
 
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-    const regex = /#/g;
+    const regex = /#/i;
     var strtrim = str.replace(regex, '');
     var strtrimBackticks = strBackticks.replace(regex, '');
 
