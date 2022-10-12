@@ -63,7 +63,7 @@ function domloaded() {
         //const pattern = /\w+/i;
         const pattern = /[a-zA-Z0-9]+/i;
 
-        https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match#syntax
+        //https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match#syntax
         //w+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
         word = null;
         let pointer = 0;
