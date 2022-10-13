@@ -53,7 +53,7 @@ function domloaded() {
   console.log(strtrim.split(/\r\n|\r|\n/).length);
   var l = strtrim.split(/\r\n|\r|\n/).length;
   var lBack = strtrimBackticks.split(/\r\n|\r|\n/).length;
-  var word = null;
+  var wordArr = null;
   var indx = -999;
   for (let lign = 0; lign < l; lign++) {
     console.log("lign=" + lign + " " + strsplit[lign]);
@@ -66,32 +66,32 @@ function domloaded() {
 
     //https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match#syntax
     //w+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-    word = null;
+    wordArr = null;
     let pointer = 0;
     console.log("lbl090 Back pointer NEW = " + pointer);
     var cpt = 0;
     do {
       console.log("lbl100 DO");
-      word = currentTextOfLine.match(pattern);
+      wordArr = currentTextOfLine.match(pattern);
       //word="xz";
-      console.log("lbl102 Back regex word = ___" + word + "____");
+      console.log("lbl102 Back regex word = ___" + wordArr[0] + "____");
 
-      if (word != null) {
-        console.log("lbl104 Back regex word = ___" + word + "____");
-        console.log("lbl106 Back length =" + word.length);
+      if (wordArr != null) {
+        console.log("lbl104 Back regex word = ___" + wordArr[0] + "____");
+        console.log("lbl106 Back length =" + wordArr[0].length);
         console.log("vs");
-        console.log("lbl107 Back chars =" + getCharacterLength(word));
+        console.log("lbl107 Back chars =" + getCharacterLength(wordArr[0]));
 
-        indx = currentTextOfLine.indexOf(word, pointer);
+        indx = currentTextOfLine.indexOf(wordArr[0], pointer);
         indx = 0;
-        pointer = indx + word.length;
+        pointer = indx + wordArr[0].length;
         console.log("lbl112 Back index = " + indx);
         console.log("lbl122 Back pointer = " + pointer);
       } else {
         console.log("lbl123 word NULL");
       }
       cpt++;
-    } while (cpt < 10 && indx >= 0 && word != "");
+    } while (cpt < 10 && indx >= 0 && wordArr[0] != "");
   }
 
   //indexof regex
@@ -120,14 +120,14 @@ function testy() {
   const str =
     "#          xfruits                          xbaguette\n#      xboisson      xjambon    ";
   console.log("lbl300 bip");
-  const pattern = /[a-zA-Z0-9]+/i;
+  const pattern2 = /[a-zA-Z0-9]+/i;
   console.log("lbl301 bip");
-  let word = str.match(pattern);
+  let word2 = str.match(pattern2);
   console.log("lbl301.5 bip");
-  console.log("lbl302 TEST Back regex word = ___" + word[0] + "____");
+  console.log("lbl302 TEST Back regex word = ___" + word2[0] + "____");
   console.log("lbl303 bip");
 
-  console.log("lbl306 TEST Back length =" + word[0].length);
+  console.log("lbl306 TEST Back length =" + word2[0].length);
   console.log("lbl308 bip");
   console.log("...TEST");
 }
